@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer className="py-16 border-t border-border">
-      <div className="w-[80%] mx-auto grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="w-[90%] mx-auto grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* 1st Part */}
         <div>
           <Logo />
@@ -119,6 +119,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} TaskZen. All Rights Reserved.
           </p>
         </div>
+        
       </div>
     </footer>
   );

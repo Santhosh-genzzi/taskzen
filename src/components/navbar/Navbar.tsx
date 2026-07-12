@@ -19,14 +19,11 @@ export const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -37,7 +34,7 @@ const Navbar = () => {
           scrolled ? "backdrop-blur-2xl bg-background/80" : "bg-transparent"
         }`}
       >
-        <div className="w-[95%] lg:w-[90%] mx-auto h-16 flex items-center justify-between">
+        <div className="max-w-6xl lg:max-w-7xl mx-auto h-16 flex items-center justify-between">
           <Logo />
 
           <ul className="hidden lg:flex items-center gap-1 py-2 px-2 rounded-full bg-surface/60 border border-border">
@@ -55,13 +52,10 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggler />
-
             <LinkButton
               variant="primary"
-              iconposition="left"
-              icon={LuDownload}
               rounded
-              text="Login"
+              text="l"
               href="/document/cv.pdf"
               download
             />

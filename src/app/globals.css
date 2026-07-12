@@ -4,6 +4,7 @@
 
 @theme {
   --color-primary: #20b2a6;
+  --color-secondary: #7C3AED; /* Purple */
 
   /* Light Theme */
   --color-background: #ffffff;
