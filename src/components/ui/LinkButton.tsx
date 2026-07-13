@@ -12,7 +12,7 @@ type LinkButtonProps = {
     variant?:"primary" | "outline"
 }
 
-const LinkButton = ({href,text,icon:Icon,iconposition,rounded,download=false,variant="primary"}:LinkButtonProps) => {
+const LinkButton = ({href,text,icon:Icon,iconposition,rounded=true,download=false,variant="primary"}:LinkButtonProps) => {
     const baseStyles = `relative px-5 py-2  font-medium ${rounded? "rounded-fill":"rounded-lg"} inline-flex items-center justify-center gap-2 overflow-hidden text-text border transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]`
     const variants = {
         primary:`bg-primary text-background border-none rounded-full `,

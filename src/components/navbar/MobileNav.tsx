@@ -12,9 +12,12 @@ const MobileNav = ({ navOpen }: MobileNavProps) => {
       <div
         className={`fixed inset-0 z-40 lg:hidden bg-background/70 backdrop-blur-sm transition-all duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
-        <aside
-          className={`fixed top-0 right-0 z-50 h-full max-w-6xl sm:max-w-7xl lg:hidden bg-surface/95 backdrop-blur-md border-2 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500  ${navOpen ? "translate-x-0" : "translate-x-full"} `}
-        >
+      <aside
+  className={`fixed inset-0 z-50 p-6 lg:hidden bg-surface/95 backdrop-blur-md flex flex-col justify-center transition-all duration-500 ${
+    navOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+
           <ul>
             {navLinks.map((link, index) => {
               return (

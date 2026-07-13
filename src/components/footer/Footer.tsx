@@ -10,8 +10,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-16 border-t border-border">
-      <div className="max-w-7xl mx-auto grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="py-16 px-6  border-t border-border">
+      <div className="max-w-7xl mx-auto  grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* 1st Part */}
         <div>
           <Logo />

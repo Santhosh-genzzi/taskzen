@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import AosProvider from "@/components/HOC/AosProvider";
 
 import Navbar from "@/components/navbar/Navbar";
 import Provider from "@/components/HOC/Provider";
+import Footer from "@/components/footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,10 +30,18 @@ export default function RootLayout({
       className={poppins.className}
     >
       <body className="min-h-screen">
+        <AosProvider>
         <Provider>
-          <Navbar />
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+          <div className="flex-1 min-h-screen">
+            {children}
+          </div>
+           <Footer/>
+          </div>
+          
         </Provider>
+        </AosProvider>
       </body>
     </html>
   );

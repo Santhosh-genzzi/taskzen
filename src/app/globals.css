@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -29,8 +30,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dot-field-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }

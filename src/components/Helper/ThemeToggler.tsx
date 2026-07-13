@@ -25,7 +25,7 @@ const ThemeToggler = () => {
       className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 flex items-center justify-center transition-all duration-300 shadow-md"
     >
       {currentTheme === "dark" ? (
-        <LuSun className="w-5 h-5 text-yellow-400" />
+        <LuSun className="w-5 h-5" />
       ) : (
         <LuMoon className="w-5 h-5 text-black" />
       )}
