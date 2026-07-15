@@ -23,7 +23,7 @@ const contactInfo = [
     icon: LuMapPin,
     label: "Location",
     value: "Tamil Nadu, India",
-    href: "#",
+    href: "/googlemaps",
   },
 ];
 const Contact = () => {

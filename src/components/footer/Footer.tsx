@@ -1,3 +1,4 @@
+import GoogleMaps from "../maps/GoogleMaps";
 import Logo from "../navbar/Logo";
 import {
   LuAArrowDown,
@@ -81,37 +82,7 @@ const Footer = () => {
         </div>
 
         {/* 4th Part */}
-        <div>
-          <h1 className="text-lg font-semibold text-black dark:text-gray-300">Newsletter</h1>
-
-          <div className="mt-8">
-            <p className="text-sm text-black dark:text-gray-300  leading-6">
-              It is a long established fact that a reader will be distracted by
-              the readable content.
-            </p>
-
-            <div className="mt-5 flex items-center space-x-4">
-              <img
-                src="https://via.placeholder.com/60"
-                alt="newsletter"
-                className="w-14 h-14 rounded-lg object-cover"
-              />
-
-              <div>
-                <div className="flex items-center">
-                  <LuCalendar className="text-amber-300 w-5 h-5 mr-2" />
-                  <p className="text-sm text-black dark:text-gray-300">
-                    25 October, 2026
-                  </p>
-                </div>
-
-                <h2 className="mt-2 text-black dark:text-gray-300 font-semibold">
-                  The Standard Chunk
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+        <GoogleMaps />
 
         {/* Bottom Footer */}
         <div className="col-span-full border-t border-gray-700 pt-6 mt-8">

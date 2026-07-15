@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionHeader from '../ui/SectionHeader';
 import { LuQuote } from 'react-icons/lu';
-
 const testimonial = [
   {
     name: "searah johnson",
@@ -33,10 +32,10 @@ const testimonial = [
   },
 ];
 
-const About2 = () => {
+const Intro2 = () => {
   return (
-     <section
-      id="about"
+    <section
+      id="/"
       className="py-24 bg-background relative overflow-hidden"
     >
       <div className="w-[90%] max-w-6xl mx-auto space-y-16">
@@ -50,17 +49,17 @@ const About2 = () => {
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-anchor-placement="top-center"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 text-text"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {testimonial.map((item, index) => {
             return (
               <div
                 key={index}
-                className="group relative p-6 rounded-2xl text-black bg-surface border border-border transition-all duration-300 hover:translate-y-1 hover:border-primary/40 hover:shadow-lg"
+                className="group relative p-6 rounded-2xl  bg-surface border border-border transition-all duration-300 hover:translate-y-1 hover:border-primary/40 hover:shadow-lg"
               >
                 <LuQuote className="absolute top-5 right-5 text-primary/10 w-10 h-10" />
 
-                <p className="text-gray-400 leading-relaxed mb-6 pr-12">
+                <p className="text-gray-700 dark:text-white/35 leading-relaxed mb-6 pr-12">
                   &quot;{item.feedback}&quot;
                 </p>
 
@@ -77,7 +76,7 @@ const About2 = () => {
                     <h4 className="text-text font-semibold group-hover:text-primary transition">
                       {item.name}
                     </h4>
-                    <p className="text-sm text-gray-700">{item.role}</p>
+                    <p className="text-sm text-gray-400">{item.role}</p>
                   </div>
                 </div>
               </div>
@@ -89,4 +88,4 @@ const About2 = () => {
   )
 }
 
-export default About2
+export default Intro2
