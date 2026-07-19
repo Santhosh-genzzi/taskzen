@@ -1,14 +1,13 @@
 {
-  "name": "projectmanagement",
-  "version": "0.1.0",
-  "private": true,
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@googlemaps/js-api-loader": "^2.1.1",
     "aos": "^2.3.4",
     "axios": "^1.18.1",
@@ -21,17 +20,20 @@
     "react-parallax-tilt": "^1.7.333",
     "react-router-dom": "^7.18.1",
     "swiper": "^14.0.5"
+=======
+    "@prisma/client": "6.19.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^9.0.3",
+    "prisma": "6.19.0",
+    "redis": "^6.1.0"
+>>>>>>> 0cf290c17694d61a26ada23b1814ed3a3ef410c8
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/aos": "^3.0.8",
-    "@types/google.maps": "^3.65.2",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.10",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "nodemon": "^3.1.14"
   }
 }
