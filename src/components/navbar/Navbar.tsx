@@ -7,13 +7,14 @@ import ThemeToggler from "../Helper/ThemeToggler";
 import LinkButton from "../ui/LinkButton";
 import { LuMenu, LuX } from "react-icons/lu";
 import MobileNav from "./MobileNav";
+import register from "@/app/register/page";
 
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "about", label: "About" },
-  { href: "career", label: "Career" },
-  { href: "contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/career", label: "Career" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
   return (
     <>
     <nav className={`sticky top-0 left-0 z-999 w-full transition-all duration-300 ${scrolled?"bg-background/80 backdrop-blur-2xl":"bg-transparent"}`}>
-    <div className={`max-w-6xl lg:max-w-7xl h-12 mx-auto flex items-center justify-between`}>
+    <div className={`max-w-6xl lg:max-w-7xl p-3 mt-3 h-8 mx-auto flex items-center justify-between`}>
       <Logo/>
       <ul className="hidden lg:flex items-center gap-2  px-4 py-2  ">
       {navLinks.map((link,index)=>(
@@ -42,7 +43,18 @@ const Navbar = () => {
       </ul>
       <div className="hidden lg:flex items-center gap-4">
         <ThemeToggler/>
-        <LinkButton variant="primary" download rounded text="l" href="/"/>
+        <Link
+  href="/register"
+  className="bg-primary/60 text-white px-5 py-2 rounded-full"
+>
+  login
+</Link>
+ <Link
+  href="/Logout"
+  className="bg-primary/60 text-white px-5 py-2 rounded-full"
+>
+  logout
+</Link>
         </div>
         <button onClick={()=>setNavOpen(!navOpen)} className="lg:hidden w-10 h-10 mr-2  rounded-full border border-border flex items-center justify-center gap-4">
           {navOpen?<LuX className="w-5 h-5 z-10"/>:<LuMenu className="w-5 h-5 z-10"/>}

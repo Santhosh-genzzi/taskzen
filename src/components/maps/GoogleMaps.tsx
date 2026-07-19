@@ -11,64 +11,50 @@ export default function GoogleMaps() {
       if (!mapRef.current) return;
 
       try {
+        // Initialize Google Maps
         setOptions({
-          apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY!,
-          version: "weekly",
+          key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+          v: "weekly",
         });
 
-        // Load Maps Library
         const { Map } =
           (await importLibrary("maps")) as google.maps.MapsLibrary;
 
-        // Load Marker Library
-        const { AdvancedMarkerElement } =
-          (await importLibrary("marker")) as google.maps.MarkerLibrary;
-
-        // Your College Location
         const collegeLocation = {
           lat: 10.876912,
           lng: 76.904812,
         };
 
-        // Create Map
         const map = new Map(mapRef.current, {
           center: collegeLocation,
-          zoom: 17,
-          mapId: "48d2a3dc54db3a3dbaffc62d", 
+          zoom: 16,
         });
 
-        // Marker
-        new AdvancedMarkerElement({
-          map,
+        const marker = new google.maps.Marker({
           position: collegeLocation,
-          title: "Sri Venkateswara College, Ettimadai",
+          map,
+          title: "Sri Venkateswara College",
         });
 
-        // Info Window
         const infoWindow = new google.maps.InfoWindow({
           content: `
             <div style="padding:10px">
-              <h3>Sri Venkateswara College</h3>
+              <h2 style="font-size:18px;font-weight:bold">
+                Sri Venkateswara College
+              </h2>
+
               <p>Ettimadai, Coimbatore</p>
-              <p></p>
-              <p>+91 9876543210</p>
+
+              <p>📞 +91 9876543210</p>
             </div>
           `,
         });
 
-        const marker = new AdvancedMarkerElement({
-          map,
-          position: collegeLocation,
-        });
-
         marker.addListener("click", () => {
-          infoWindow.open({
-            anchor: marker,
-            map,
-          });
+          infoWindow.open(map, marker);
         });
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error("Google Maps Error:", err);
       }
     };
 
@@ -78,7 +64,7 @@ export default function GoogleMaps() {
   return (
     <div
       ref={mapRef}
-      className="w-80 h-50 rounded-xl shadow-lg"
+      className="w-full h-50 rounded-xl overflow-hidden shadow-lg"
     />
   );
 }

@@ -2,7 +2,7 @@ import { LuCode, LuDatabase, LuRocket } from "react-icons/lu"
 const About = () => {
   return (
     <section  id='about' className='py-24 overflow-hidden relative '>
-        <div className='w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'
+        <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'
         >
             {/* leftside */}
             <div data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="top-center" className='flex justify-center lg:justify-start'>
